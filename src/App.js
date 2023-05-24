@@ -20,12 +20,16 @@ function App() {
   const deletePlayer = (playerId) => {
     const updatedPlayers = players.filter((player) => player.id !== playerId);
     setPlayers(updatedPlayers);
+
+    if (updatedPlayers.length === 0) {
+      alert('Please add players to continue the game.');
+    }
   };
 
   const decreasePoints = (playerId) => {
     const updatedPlayers = players.map((player) => {
       if (player.id === playerId) {
-        const newPoints = Math.max(0, player.points - 1); // Limit the points to a minimum of 0
+        const newPoints = Math.max(0, player.points - 1);
         return {
           ...player,
           points: newPoints,
@@ -35,7 +39,6 @@ function App() {
     });
     setPlayers(updatedPlayers);
   };
-  
 
   const increasePoints = (playerId) => {
     const updatedPlayers = players.map((player) => {
