@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+
+
+body{
+  margin: 50px 250px !important;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header{
+  background-color: rgb(75, 190, 190);
   display: flex;
-  flex-direction: column;
+  color: white;
+  padding-left: 10px;
+}
+
+.titlePoints h1{
+  margin-left: 340px;
+  margin-top: 15px;
+}
+
+.bodyComponent{
+  display: inline-block;
+  border: 1px solid #ccc;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100%;
+}
+
+.bodyComponent svg{
+  font-size: 35px;
+  margin: 0px 10px;
+  cursor: pointer;
+}
+
+.bodyComponent >span{
+  font-size: 30px;
+  margin: 0px 80px;
+  padding: 5px 0px;
+}
+.button-del{
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin-left: 5px;
+}
+
+.button-del:hover{
+  background-color: #ff9e9e;
+  border-radius: 5px;
+}
+
+.All-button{
+  margin-left: 360px;
+  border: none;
+}
+
+.All-button button{
+  width: 55px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.All-button span{
+  padding: 0px 20px;
+}
+
+.footer{
+  background-color: rgb(75, 190, 190);
+  height: 70px;
+}
+
+.mb-5{
+  padding: 15px;
+}
+
+.mb-5 button{
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.input-group input{
+  background-color: #38675c;
+}
+
+.input-group input::placeholder{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.listcontent{
+  display: flex;
+  align-items: center;
+  /* border: 1px solid #ccc; */
+  padding: 5px 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.play-name{
+  width: 360px;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+#basic-addon2{
+  color: black;
+}
+
+
+.bodyComponent> div{
+  display: flex;
+  border: 1px solid #ccc;
+  padding: 5px 0px;
 }
