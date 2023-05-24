@@ -10,7 +10,7 @@ function HeaderComponent({ players }) {
         <p>Total Points: {totalPoints}</p>
       </div>
       <div className="titlePoints">
-        <h1>Bảng điểm</h1>
+        <h1>TABLE POINTS</h1>
       </div>
     </header>
   );

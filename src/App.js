@@ -6,7 +6,7 @@ import HeaderComponent from './Components/Header';
 
 function App() {
   const [players, setPlayers] = useState([]);
-// chức năng thêm người chơi
+
   const addPlayer = (name) => {
     const newPlayer = {
       id: players.length + 1,
@@ -16,16 +16,16 @@ function App() {
 
     setPlayers([...players, newPlayer]);
   };
-// chức năng xoá người chơi
+
   const deletePlayer = (playerId) => {
     const updatedPlayers = players.filter((player) => player.id !== playerId);
     setPlayers(updatedPlayers);
   };
-// chức năng giảm số điểm
+
   const decreasePoints = (playerId) => {
     const updatedPlayers = players.map((player) => {
       if (player.id === playerId) {
-        const newPoints = Math.max(0, player.points - 1); //giảm tới số 0 là dừng
+        const newPoints = Math.max(0, player.points - 1); // Limit the points to a minimum of 0
         return {
           ...player,
           points: newPoints,
@@ -36,13 +36,13 @@ function App() {
     setPlayers(updatedPlayers);
   };
   
-// chức năng tăng số điểm
+
   const increasePoints = (playerId) => {
     const updatedPlayers = players.map((player) => {
       if (player.id === playerId) {
         return {
           ...player,
-          points: player.points + 1,// tăng thêm 1 số
+          points: player.points + 1,
         };
       }
       return player;
